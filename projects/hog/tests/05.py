@@ -62,11 +62,10 @@ test = {
           >>> s0
           106
           >>> s1
-          70e71b420a966665c548a3bb2cb30d7d
-          # locked
+          10
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -74,14 +73,12 @@ test = {
           >>> # Goal score is not hardwired
           >>> s0, s1 = hog.play(always(5), always(5), goal=10, dice=always_three)
           >>> s0
-          af0b3285304485122429774c0ea3182a
-          # locked
+          15
           >>> s1
-          962aea5f59fc55bd65ccacf4603c8f22
-          # locked
+          0
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         },
         {
           'code': r"""
@@ -89,14 +86,12 @@ test = {
           >>> # Goal score is not hardwired
           >>> s0, s1 = hog.play(always(5), always(5), goal=15, dice=always_three)
           >>> s0
-          af0b3285304485122429774c0ea3182a
-          # locked
+          15
           >>> s1
-          962aea5f59fc55bd65ccacf4603c8f22
-          # locked
+          0
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
@@ -119,14 +114,12 @@ test = {
           >>> strat1 = lambda score, opponent: score // 10 - 2
           >>> s0, s1 = hog.play(strat0, strat1, score0=61, score1=80, dice=always_seven)
           >>> s0
-          34925130a43323b1fb56610276d844e6
-          # locked
+          122
           >>> s1
-          77ff06fbe493a9a25c9b78e886e0df26
-          # locked
+          77
           """,
           'hidden': False,
-          'locked': True
+          'locked': False
         }
       ],
       'scored': True,
