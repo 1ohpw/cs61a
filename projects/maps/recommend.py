@@ -143,7 +143,14 @@ def rate_all(user, restaurants, feature_fns):
     predictor = best_predictor(user, ALL_RESTAURANTS, feature_fns)
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 9
-    "*** YOUR CODE HERE ***"
+    ratings = {}
+    for r in restaurants:
+        name = restaurant_name(r)
+        ratings[name] = predictor(r)
+    for r in reviewed:
+        name = restaurant_name(r)
+        ratings[name] = user_rating(user, restaurant_name(r))
+    return ratings
     # END Question 9
 
 
@@ -155,7 +162,12 @@ def search(query, restaurants):
     restaurants -- A sequence of restaurants
     """
     # BEGIN Question 10
-    "*** YOUR CODE HERE ***"
+    restaurant_list = []
+    for r in restaurants:
+        for c in restaurant_categories(r):
+            if query == c:
+                restaurant_list.append(r)
+    return restaurant_list
     # END Question 10
 
 
